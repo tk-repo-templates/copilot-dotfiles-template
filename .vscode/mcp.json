@@ -28,10 +28,18 @@
 			"type": "http",
 			"url": "https://mcp.grep.app"
 		},
+		"semgrep": {
+            "type": "http",
+            "url": "https://mcp.semgrep.ai/mcp"
+        },
 		"nx-mcp": {
 			"type": "stdio",
 			"command": "npx",
 			"args": ["nx-mcp@latest", "."]
+		},
+		"github": {
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp/"
 		}
 	},
 	"inputs": []
