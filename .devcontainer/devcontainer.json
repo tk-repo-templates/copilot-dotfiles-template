@@ -1,0 +1,48 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"customizations": {
+		"vscode": {
+            "mcp": {
+                "servers": {
+                    "context7": {
+                        "type": "stdio",
+                        "command": "npx",
+                        "args": ["-y", "@upstash/context7-mcp"]
+                    },
+                    "playwright": {
+                        "command": "npx",
+                        "args": [
+                            "@playwright/mcp@latest"
+                        ]
+                    },
+                    "microsoft.docs.mcp": {
+                        "type": "http",
+                        "url": "https://learn.microsoft.com/api/mcp"
+                    },
+                    "sequential-thinking": {
+                        "command": "docker",
+                        "args": [
+                            "run",
+                            "--rm",
+                            "-i",
+                            "mcp/sequentialthinking"
+                        ]
+                    },
+                    "grep": {
+                        "type": "http",
+                        "url": "https://mcp.grep.app"
+                    },
+                    "nx-mcp": {
+                        "type": "stdio",
+                        "command": "npx",
+                        "args": ["nx-mcp@latest", "."]
+                    }
+                }
+            },
+			"extensions": [
+				"ms-windows-ai-studio.windows-ai-studio",
+				"GitHub.copilot-chat"
+			]
+		}
+	}
+}
